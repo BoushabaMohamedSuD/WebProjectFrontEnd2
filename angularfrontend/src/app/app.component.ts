@@ -1,3 +1,4 @@
+import { CatalogueService } from './catalogue.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularfrontend';
+  constructor(private catalogue: CatalogueService) { }
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnInit(): void {
+    console.log('init');
+  }
 }
